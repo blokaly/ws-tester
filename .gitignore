@@ -4,3 +4,4 @@ client/yarn.lock
 server/\.gradle/
 server/\.idea/
 server/out/
+server/build/
