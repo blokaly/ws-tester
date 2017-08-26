@@ -39,9 +39,10 @@ public class WebSocketHandler {
     }
 
     @OnWebSocketMessage
-    public void onMessage(Session session, String json) {
+    public void onMessage(Session session, String message) {
+        LOGGER.info("Message received: {}", message);
         es.submit(() -> {
-            broadcast(json);
+            broadcast(message);
         });
     }
 
